@@ -172,5 +172,16 @@ yes_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='
 
 yes_button.click()
 
+#find user icon locator
+logout_field_locator = wait.until(EC.visibility_of_element_located((By.XPATH, "//span[@class='fa ml-1 text-white cursor-pointer fa-chevron-down']")))
+
+#click on icon
+logout_field_locator.click()
+
+#find logout button locator
+logout_button = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[text()='Logout']")))
+
+#click on Logout
+login_button.click()
 # Close the browser window
 driver.quit()

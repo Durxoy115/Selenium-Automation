@@ -153,5 +153,24 @@ save_button = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="b
 #click on Save Button
 save_button.click()
 
+#locator on 3dot
+three_dot = wait.until( EC.visibility_of_element_located((By.XPATH, "(//button[@aria-label='Action menu'])[3]")))
+       
+#click on remove
+three_dot.click()
+
+#remove user
+click_remove = wait.until( EC.visibility_of_element_located((By.XPATH, "//span[text()='Remove']")))
+
+#click on remove
+click_remove.click()
+
+# Wait for the button to be clickable
+yes_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Yes']")))
+
+#click yes button to remove user
+
+yes_button.click()
+
 # Close the browser window
 driver.quit()

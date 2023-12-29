@@ -154,7 +154,7 @@ save_button = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="b
 save_button.click()
 
 #locator on 3dot
-three_dot = wait.until( EC.visibility_of_element_located((By.XPATH, "(//button[@aria-label='Action menu'])[3]")))
+three_dot = wait.until( EC.visibility_of_element_located((By.XPATH, "(//button[@aria-label='Action menu'])[1]")))
        
 #click on remove
 three_dot.click()
@@ -166,7 +166,7 @@ click_remove = wait.until( EC.visibility_of_element_located((By.XPATH, "//span[t
 click_remove.click()
 
 # Wait for the button to be clickable
-yes_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Yes']")))
+yes_button = wait.until(EC.visibility_of_element_located((By.XPATH, "//button[text()='Yes']")))
 
 #click yes button to remove user
 
@@ -179,9 +179,9 @@ logout_field_locator = wait.until(EC.visibility_of_element_located((By.XPATH, "/
 logout_field_locator.click()
 
 #find logout button locator
-logout_button = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[text()='Logout']")))
+logout_button = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[2]")))
 
 #click on Logout
-login_button.click()
+logout_button.click()
 # Close the browser window
 driver.quit()
